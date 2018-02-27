@@ -3444,7 +3444,7 @@ h3 {
   font-size: 1.11111rem;
   line-height: 3rem;
   font-family: "Oswald", sans-serif;
-  color: #f0b68c; }
+  color: #8d8d8d; }
   @media screen and (min-width: 440px) {
     h3 {
       font-size: 1.2rem; } }
@@ -3460,7 +3460,7 @@ h4 {
   line-height: 1.5rem;
   margin: 0.75rem 0 0;
   font-family: "Oswald", sans-serif;
-  color: #f0b68c; }
+  color: #8d8d8d; }
   @media screen and (min-width: 440px) {
     h4 {
       font-size: 1.1rem; } }
@@ -3477,3 +3477,192 @@ p {
 
 a {
   font-family: "Roboto", sans-serif; }
+
+.landingWrap {
+  height: 100vh;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 10% 40% 20% 30%;
+  grid-template-columns: 1fr 1fr; }
+  .landingWrap-infoCorp {
+    grid-row: 1 / 3;
+    grid-column: 1 / -1; }
+  .landingWrap-promo {
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
+    z-index: 10; }
+  .landingWrap-action {
+    grid-row: 4 / -1;
+    grid-column: 1 / -1; }
+
+.hamburger:focus {
+  outline: 0;
+  border: 0; }
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: #fff; }
+
+.u-afterFixed {
+  padding-top: 4rem; }
+
+.Header {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 4rem;
+  transition: all .3s ease-out;
+  background-color: rgba(26, 26, 26, 0);
+  transition: background-color .3s linear; }
+  .Header.is-active {
+    background-color: #1a1a1a; }
+  .Header-container {
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4rem, auto;
+    grid-template-areas: ". logo hamburger" "panel panel panel"; }
+
+.Logo {
+  opacity: 0;
+  z-index: 10001;
+  grid-area: logo;
+  justify-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s ease-in; }
+  .Logo.is-active {
+    opacity: 1; }
+  .Logo-link {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    text-indent: -9999px;
+    background-image: url("images/escudo.png");
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.Panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow-y: auto;
+  grid-area: panel;
+  background-color: #1a1a1a;
+  transition: transform .3s ease-out;
+  transform: translateX(-110%); }
+  .Panel.is-active {
+    transform: translateX(0); }
+  .Panel-button {
+    z-index: 999;
+    grid-area: hamburger;
+    justify-self: end; }
+
+.Menu {
+  margin-top: calc(4rem + 2rem); }
+  .Menu-listItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none; }
+  .Menu-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-out; }
+  .Menu-link:hover {
+    color: #b8d640;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+    background-color: #fff; }
+
+@media screen and (min-width: 64em) {
+  .Header-container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 4rem;
+    grid-template-areas: 'logo panel'; }
+  .Logo {
+    justify-self: start; }
+  .Panel {
+    position: static;
+    overflow-y: visible;
+    transform: translate(0, 0);
+    background-color: transparent; }
+    .Panel-button {
+      display: none; }
+  .Menu {
+    margin-top: 0; }
+    .Menu-listItem {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center; }
+    .Menu-link {
+      border-top: medium solid transparent; }
+    .Menu-link:hover {
+      border-top: medium solid #b8d640;
+      background-color: transparent; } }
+
+.landingWrap {
+  background-image: url("./images/fondo320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .landingWrap-infoCorp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .landingWrap-infoCorp .logo {
+      background-image: url("./images/logoCompleto.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: -5rem;
+      height: 50%;
+      width: 50%; }
+    .landingWrap-infoCorp .slogan {
+      margin-left: 1rem;
+      border-left: 1.5px solid #74b283; }
+      .landingWrap-infoCorp .slogan h2, .landingWrap-infoCorp .slogan p {
+        margin-left: 1rem; }
+      .landingWrap-infoCorp .slogan h2 {
+        font-size: 1.3rem; }
+      .landingWrap-infoCorp .slogan p {
+        font-size: .8rem;
+        line-height: 1rem; }
+  .landingWrap-promo {
+    margin-top: 1rem;
+    background-image: url("./images/PromoResp.svg");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .landingWrap-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .landingWrap-action .icon {
+      font-size: 3rem;
+      z-index: 11; }
+    .landingWrap-action .intro {
+      font-size: .8rem;
+      text-align: center; }
+      .landingWrap-action .intro p {
+        line-height: 1rem; }
+    .landingWrap-action .actButton {
+      margin-top: 1rem;
+      width: 9rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      background-color: #74b283; }
+      .landingWrap-action .actButton a {
+        color: #1a1a1a; }
