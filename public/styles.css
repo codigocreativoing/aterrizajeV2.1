@@ -3638,7 +3638,9 @@ a {
         font-size: .8rem;
         line-height: 1rem; }
   .landingWrap-promo {
-    margin-top: 1rem; }
+    background-color: fuchsia;
+    display: flex;
+    align-items: center; }
   .landingWrap-action {
     display: flex;
     justify-content: center;
@@ -3652,6 +3654,10 @@ a {
       text-align: center; }
       .landingWrap-action .intro p {
         line-height: 1rem; }
+    .landingWrap-action .action {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .landingWrap-action .actButton {
       margin-top: 1rem;
       width: 9rem;

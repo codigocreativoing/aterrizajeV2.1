@@ -7,7 +7,7 @@
   // height: 100vh;
   &-infoCorp{
     // background-color: gold;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,8 +37,10 @@
     }
   }
   &-promo{
-    // background-color: fuchsia;
-    margin-top: 1rem;
+    background-color: fuchsia;
+    display: flex;
+    align-items: center;
+    // margin-top: 1rem;
     // background-image: url('./images/PromoResp.svg');
     // background-size: contain;
     // background-repeat: no-repeat;
@@ -56,10 +58,14 @@
     .intro{
       font-size: .8rem;
       text-align: center;
+
       p{
         line-height: 1rem;
       }
 
+    }
+    .action{
+      @include centerFlex;
     }
     .actButton{
       margin-top: 1rem;
@@ -74,7 +80,8 @@
         color: $color;
       }
     }
-  
+
+
   }
 }
 @include mQ(xlS){
