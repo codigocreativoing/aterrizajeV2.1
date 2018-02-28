@@ -7,6 +7,7 @@
   // height: 100vh;
   &-infoCorp{
     // background-color: gold;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,9 +39,9 @@
   &-promo{
     // background-color: fuchsia;
     margin-top: 1rem;
-    background-image: url('./images/PromoResp.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    // background-image: url('./images/PromoResp.svg');
+    // background-size: contain;
+    // background-repeat: no-repeat;
     // min-height: 10%;
     // max-width: 90%;
   }
