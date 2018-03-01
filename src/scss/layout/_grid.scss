@@ -22,3 +22,33 @@
     grid-column: 1 / -1;
   }
 }
+@include mQ(xsS){
+  body{
+    //background-color: rebeccapurple;
+  }
+}
+@include mQ(smallS){
+  body{
+    //background-color: orangered;
+  }
+}
+@include mQ(mediumS){
+  body{
+    //background-color: yellowgreen;
+  }
+}
+@include mQ(wideS){
+  body{
+    //background-color: teal;
+  }
+}
+@include mQ(largeS){
+  body{
+    //background-color: violet;
+  }
+}
+@include mQ(xlS){
+  body{
+    //background-color: fuchsia;
+  }
+}
