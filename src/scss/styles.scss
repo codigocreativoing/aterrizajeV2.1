@@ -22,7 +22,8 @@
 
 // carpeta layout
 @import
-'./layout/_grid.scss';
+'./layout/_grid.scss',
+'./layout/_portafolio';
 // './layout/hero',
 // // './layout/main',
 // // './layout/activities',
@@ -34,8 +35,8 @@
 
 // // carpeta components
 @import
-'./components/navigation_off_canvas';
-// './components/_menu_social',
+'./components/navigation_off_canvas',
+'./components/_menu_social';
 // './components/phrase_hero',
 // './components/header_title',
 // './components/titles_pack',

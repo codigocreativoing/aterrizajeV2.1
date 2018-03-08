@@ -51,6 +51,7 @@
     // background-color: dodgerblue;
     @include centerFlex;
     flex-direction: column;
+    overflow: hidden;
     .icon{
       font-size: 3rem;
       z-index: 11;
@@ -66,6 +67,23 @@
     }
     .action{
       @include centerFlex;
+      // background-color: teal;
+      .flecha{
+        width: 5rem;
+        height:3rem;
+        // background-color: darkviolet;
+        background-image: url('./images/flechaVerde.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        animation: flecha 1s infinite ease;
+        @keyframes flecha{
+          to{
+            transform: scale(2)
+          }
+        }
+      }
     }
     .actButton{
       margin-top: 1rem;
@@ -76,6 +94,12 @@
       align-items: center;
       border-radius: 1rem;
       background-color: $primario;
+      &:hover{
+        background-color: $secundario;
+        a{
+          color: $clTextoGen;
+        }
+      }
       a{
         color: $color;
       }
